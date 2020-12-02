@@ -6,7 +6,7 @@ var product=require("../models/products");
 router.get('/', async function(req, res, next) {
   let products= await product.find();
   console.log(products);
-  res.render('products/productslist',{tit:"Products in DataBase",products});
+  res.render('products/productslist',{tit:"student Record",products});
 });
 router.get('/add', async function(req, res, next) {
   res.render('products/add');
@@ -28,7 +28,8 @@ router.get("/edit/:id", async function (req, res, next) {
 router.post("/edit/:id", async function (req, res, next) {
   let Product = await product.findById(req.params.id);
   Product.name=req.body.name;
-  Product.price=req.body.price;
+  Product.adress=req.body.adress;
+  Product.class=req.body.class;
   await Product.save();
   res.redirect("/products");
 });

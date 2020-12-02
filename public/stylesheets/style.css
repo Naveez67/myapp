@@ -6,3 +6,18 @@ body {
 a {
   color: #00B7FF;
 }
+.desi{
+  
+  background-color:#3239a3;
+  background-color:#6e78f8;
+  margin-left: 3.15rem;
+  margin-right: 3.15rem;
+}
+ul{
+display: inline;
+float:right;
+margin-right: 0%;
+margin-top: 0%;
+font-size: medium;
+color: black;
+}

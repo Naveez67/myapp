@@ -3,9 +3,13 @@ extends ../layout
 block content
     form(action="/products/add",method="post")
         .form-group
-            label(for="") Product Name
+            label(for="") Name
             input#name(type="text" class="form-control" name="name")
         .form-group
-            label(for="") Product Price
-            input#price(type="text" class="form-control" name="price")
+            label(for="") Address
+            input#adress(type="text" class="form-control" name="adress")
+        .form-group
+            label(for="") Class
+            input#class(type="text" class="form-control" name="class")
+
         input(type="submit",class="btn btn-danger")
