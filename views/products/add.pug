@@ -3,13 +3,16 @@ extends ../layout
 block content
     form(action="/products/add",method="post")
         .form-group
-            label(for="") Name
-            input#name(type="text" class="form-control" name="name")
+            label(for="") Course Name
+            input#name(type="text" class="form-control" name="cname")
         .form-group
-            label(for="") Address
-            input#adress(type="text" class="form-control" name="adress")
+            label(for="") Course ID
+            input#adress(type="text" class="form-control" name="cid")
         .form-group
-            label(for="") Class
-            input#class(type="text" class="form-control" name="class")
+            label(for="") Course duration
+            input#class(type="text" class="form-control" name="cd")
+        .form-group
+            label(for="") Course fee
+            input#class(type="text" class="form-control" name="cf")
 
         input(type="submit",class="btn btn-danger")

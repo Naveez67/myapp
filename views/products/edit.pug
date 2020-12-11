@@ -2,14 +2,17 @@ extends ../layout
 
 block content
     h1 Edit product
-    form(action="/products/edit/"+Product._id,method="post")
+    form(action="/products/edit/"+course._id,method="post")
         .form-group
-            label(for="") Product Name
-            input#name(type="text" class="form-control" name="name",value=Product.name)
+            label(for="") Course Name
+            input#cname(type="text" class="form-control" name="cname",value=course.cname)
         .form-group
-            label(for="") Product Price
-            input#adress(type="text" class="form-control" name="adress", value=Product.adress)
+            label(for="") Course ID
+            input#cid(type="text" class="form-control" name="cid", value=course.cid)
         .form-group
-            label(for="") class
-            input#class(type="text" class="form-control" name="class", value=Product.class)
+            label(for="") Course Duration
+            input#cd(type="text" class="form-control" name="cd", value=course.cd)
+        .form-group
+            label(for="") Course Fee
+            input#cf(type="text" class="form-control" name="cf", value=course.cf)
         input(type="submit",class="btn btn-danger")

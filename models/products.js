@@ -1,8 +1,9 @@
 const mongoose = require("mongoose");
-var productSchema=mongoose.Schema({
-    name:String,
-    adress:String,
-    class:String,
+var coursetSchema=mongoose.Schema({
+    cname:String,
+    cid:String,
+    cd:String,
+    cf:String,
 });
-const product=mongoose.model("product",productSchema);
-module.exports=product;
+const courses=mongoose.model("product",coursetSchema);
+module.exports=courses;

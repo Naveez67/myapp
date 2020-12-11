@@ -4,24 +4,25 @@ block content
     .row
         .col-sm-8
             h1=tit
-        .col-sm-4
-            a(href="/products/add",class="btn btn-success float-right") Add student
 
     
-    table.table
+    table.table.table-striped.table-info.table-hover.table-bordered
         thead
             tr
-                th Name
-                th Address
-                th class
+                th Course name
+                th Course ID
+                th Course duration
+                th Course fee
 
         tbody
             each product in products
                 tr
 
-                    td=product.name
-                    td=product.adress
-                    td=product.class
+                    td=product.cname
+                    td=product.cid
+                    td=product.cd
+                    td=product.cf
                     td
                         a(href="/products/edit/"+product._id,class="btn btn-warning") Edit
-                        a(href="/products/delete/"+product._id,class="btn btn-info") Delete
+                        a(href="/products/delete/"+product._id,class="btn btn-danger") Delete
+    a(href="/products/add",class="btn btn-primary float-left") Add Course
